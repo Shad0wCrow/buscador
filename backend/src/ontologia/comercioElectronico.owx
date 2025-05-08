@@ -1,0 +1,1821 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.ejemplo.org/ontologia"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.ejemplo.org/ontologia">
+    <Prefix name="" IRI="http://www.ejemplo.org/ontologia#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Accesorio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Calificacion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Carrito"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cliente"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ComercioElectronico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CursoOnline"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ebook"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Efectivo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Electronico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Envio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EnvioInternacional"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EnvioNacional"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pago"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PagoDigital"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PagoTarjeta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pedido"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Producto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProductoDigital"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProductoFisico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Resena"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reseña"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ReseñaTexto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Software"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Usuario"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vendedor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#PagoRelacionado"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#autor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#cliente"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#envio"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#estado"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pago"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#producto"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#productoRelacionado"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#productos"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#vendedor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#aranceles"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#autor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cantidadPaginas"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#categoria"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cobertura"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#comentario"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#compatibilidad"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#consumoEnergia"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#costo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#cuentaDigital"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#descripcion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#descuentosAplicados"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#dimensiones"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#direccionEntrega"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#disponibilidad"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#documentacion_requerida"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#duracion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#editorial"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#email"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#emailAsociado"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#emisorTarjeta"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#estadoEnvio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#estadoPago"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#estadoPedido"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fecha"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fechaCreacion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fechaEnvio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fechaPago"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fechaResena"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#fechaUltimaModificacion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#formato"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#garantia"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#idEnvio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#idPedido"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#idProducto"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#idResena"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#idReseña"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#idTransaccion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#idioma"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#impuesto_local"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#instructor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#licencia"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#likes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#material"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#moneda"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#monto"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nivel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombre"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#nombreUsuarios"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numeroPaginas"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#numeroSeguimiento"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#pais_destino"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#peso"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#plataformaPago"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#precio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#proveedorPago"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#puntuacion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#recomendado"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#reputacion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#requisitosMinimos"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#requisitosSistema"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#respuestas"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#restricciones"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sistemaOperativo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tamanoArchivo"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#telefono"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#texto"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tipoAccesorio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tipoPago"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tipoTarjeta"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#tipo_servicio"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#total"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#transportista"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ultimosCuatroDigitos"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#version"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#versionSoftware"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#voltaje"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Accesorio1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cliente1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cliente2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cliente3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ebook2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Electronico1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Electronico2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Envio1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Envio2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pago1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PagoDigital1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pedido1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pedido2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pedido3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Resena2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Software2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vendedor2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#libro1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#software1"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Accesorio"/>
+        <Class IRI="#ProductoFisico"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Calificacion"/>
+        <Class IRI="#Reseña"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Carrito"/>
+        <Class IRI="#Pedido"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cliente"/>
+        <Class IRI="#Usuario"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CursoOnline"/>
+        <Class IRI="#ProductoDigital"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ebook"/>
+        <Class IRI="#ProductoDigital"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Efectivo"/>
+        <Class IRI="#Pago"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Electronico"/>
+        <Class IRI="#ProductoFisico"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Envio"/>
+        <Class IRI="#Producto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EnvioInternacional"/>
+        <Class IRI="#Envio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EnvioNacional"/>
+        <Class IRI="#Envio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pago"/>
+        <Class IRI="#Pedido"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PagoDigital"/>
+        <Class IRI="#Pago"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PagoTarjeta"/>
+        <Class IRI="#Pago"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pedido"/>
+        <Class IRI="#ComercioElectronico"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Producto"/>
+        <Class IRI="#Pedido"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProductoDigital"/>
+        <Class IRI="#Producto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProductoFisico"/>
+        <Class IRI="#Producto"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Resena"/>
+        <Class IRI="#Reseña"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reseña"/>
+        <Class IRI="#Envio"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ReseñaTexto"/>
+        <Class IRI="#Reseña"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Software"/>
+        <Class IRI="#ProductoDigital"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vendedor"/>
+        <Class IRI="#Usuario"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Accesorio"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cliente"/>
+        <NamedIndividual IRI="#Cliente2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cliente"/>
+        <NamedIndividual IRI="#Cliente3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ebook"/>
+        <NamedIndividual IRI="#Ebook2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Electronico"/>
+        <NamedIndividual IRI="#Electronico1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Electronico"/>
+        <NamedIndividual IRI="#Electronico2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Envio"/>
+        <NamedIndividual IRI="#Envio2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PagoDigital"/>
+        <NamedIndividual IRI="#PagoDigital1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pedido"/>
+        <NamedIndividual IRI="#Pedido2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pedido"/>
+        <NamedIndividual IRI="#Pedido3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Resena"/>
+        <NamedIndividual IRI="#Resena2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Software"/>
+        <NamedIndividual IRI="#Software2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vendedor"/>
+        <NamedIndividual IRI="#Vendedor2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ebook"/>
+        <NamedIndividual IRI="#libro1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Software"/>
+        <NamedIndividual IRI="#software1"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#productos"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+        <NamedIndividual IRI="#Pedido1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#PagoRelacionado"/>
+        <NamedIndividual IRI="#Pago1"/>
+        <NamedIndividual IRI="#Pedido1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#cliente"/>
+        <NamedIndividual IRI="#Pedido1"/>
+        <NamedIndividual IRI="#Cliente1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#envio"/>
+        <NamedIndividual IRI="#Pedido1"/>
+        <NamedIndividual IRI="#Envio1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#cliente"/>
+        <NamedIndividual IRI="#Pedido2"/>
+        <NamedIndividual IRI="#Cliente2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#cliente"/>
+        <NamedIndividual IRI="#Pedido3"/>
+        <NamedIndividual IRI="#Cliente3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#envio"/>
+        <NamedIndividual IRI="#Pedido3"/>
+        <NamedIndividual IRI="#Envio2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pago"/>
+        <NamedIndividual IRI="#Pedido3"/>
+        <NamedIndividual IRI="#PagoDigital1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#vendedor"/>
+        <NamedIndividual IRI="#Pedido3"/>
+        <NamedIndividual IRI="#Vendedor2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#cliente"/>
+        <NamedIndividual IRI="#Resena2"/>
+        <NamedIndividual IRI="#Cliente2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#producto"/>
+        <NamedIndividual IRI="#Resena2"/>
+        <NamedIndividual IRI="#Electronico1"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#categoria"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+        <Literal>Accesorios</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#categoria"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+        <Literal>Audio</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#compatibilidad"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+        <Literal>Audifonos</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#compatibilidad"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+        <Literal>Universal</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#disponibilidad"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idProducto"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+        <Literal>A001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idProducto"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+        <Literal>PRO003</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#material"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+        <Literal>Plastico</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#material"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+        <Literal>Plástico y silicona</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+        <Literal>Audifonos de cable Tomate</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+        <Literal>Audífonos Bluetooth Premium</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#peso"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#precio"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#precio"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">89.99</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tipoAccesorio"/>
+        <NamedIndividual IRI="#Accesorio1"/>
+        <Literal>Audifonos</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#Cliente1"/>
+        <Literal>ana123@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombreUsuarios"/>
+        <NamedIndividual IRI="#Cliente1"/>
+        <Literal>Ana Smith</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#telefono"/>
+        <NamedIndividual IRI="#Cliente1"/>
+        <Literal>787655253</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#Cliente2"/>
+        <Literal>juanperez@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombreUsuarios"/>
+        <NamedIndividual IRI="#Cliente2"/>
+        <Literal>Juan Pérez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#telefono"/>
+        <NamedIndividual IRI="#Cliente2"/>
+        <Literal>789456123</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#Cliente3"/>
+        <Literal>anamartinez@ejemplo.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombreUsuarios"/>
+        <NamedIndividual IRI="#Cliente3"/>
+        <Literal>Ana Martínez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#telefono"/>
+        <NamedIndividual IRI="#Cliente3"/>
+        <Literal>645789321</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#autor"/>
+        <NamedIndividual IRI="#Ebook2"/>
+        <Literal>Dra. Elena Gómez</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#cantidadPaginas"/>
+        <NamedIndividual IRI="#Ebook2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">325</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#categoria"/>
+        <NamedIndividual IRI="#Ebook2"/>
+        <Literal>Informática</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#disponibilidad"/>
+        <NamedIndividual IRI="#Ebook2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#editorial"/>
+        <NamedIndividual IRI="#Ebook2"/>
+        <Literal>TechBooks</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#formato"/>
+        <NamedIndividual IRI="#Ebook2"/>
+        <Literal>PDF, EPUB</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idProducto"/>
+        <NamedIndividual IRI="#Ebook2"/>
+        <Literal>EB002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#licencia"/>
+        <NamedIndividual IRI="#Ebook2"/>
+        <Literal>Individual</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Ebook2"/>
+        <Literal>Guía Avanzada de Ontologías</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#precio"/>
+        <NamedIndividual IRI="#Ebook2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">24.99</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#categoria"/>
+        <NamedIndividual IRI="#Electronico1"/>
+        <Literal>Celulares</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#consumoEnergia"/>
+        <NamedIndividual IRI="#Electronico1"/>
+        <Literal>5W</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#disponibilidad"/>
+        <NamedIndividual IRI="#Electronico1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#garantia"/>
+        <NamedIndividual IRI="#Electronico1"/>
+        <Literal>12 meses</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idProducto"/>
+        <NamedIndividual IRI="#Electronico1"/>
+        <Literal>E001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#material"/>
+        <NamedIndividual IRI="#Electronico1"/>
+        <Literal>Metal y vidrio</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Electronico1"/>
+        <Literal>Smartphone Galaxy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#peso"/>
+        <NamedIndividual IRI="#Electronico1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">180</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#precio"/>
+        <NamedIndividual IRI="#Electronico1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">699.99</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#voltaje"/>
+        <NamedIndividual IRI="#Electronico1"/>
+        <Literal>5V</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#categoria"/>
+        <NamedIndividual IRI="#Electronico2"/>
+        <Literal>Computadoras</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#consumoEnergia"/>
+        <NamedIndividual IRI="#Electronico2"/>
+        <Literal>65W</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#disponibilidad"/>
+        <NamedIndividual IRI="#Electronico2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#garantia"/>
+        <NamedIndividual IRI="#Electronico2"/>
+        <Literal>24 meses</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idProducto"/>
+        <NamedIndividual IRI="#Electronico2"/>
+        <Literal>E002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Electronico2"/>
+        <Literal>Laptop UltraBook Pro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#peso"/>
+        <NamedIndividual IRI="#Electronico2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#precio"/>
+        <NamedIndividual IRI="#Electronico2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1299.99</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#cobertura"/>
+        <NamedIndividual IRI="#Envio1"/>
+        <Literal>Nacional</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#costo"/>
+        <NamedIndividual IRI="#Envio1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#estadoEnvio"/>
+        <NamedIndividual IRI="#Envio1"/>
+        <Literal>Entregado</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idEnvio"/>
+        <NamedIndividual IRI="#Envio1"/>
+        <Literal>ENV001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#impuesto_local"/>
+        <NamedIndividual IRI="#Envio1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#peso"/>
+        <NamedIndividual IRI="#Envio1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">300</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tipo_servicio"/>
+        <NamedIndividual IRI="#Envio1"/>
+        <Literal>Estandar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#direccionEntrega"/>
+        <NamedIndividual IRI="#Envio2"/>
+        <Literal>Calle Principal 123, Ciudad</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#estadoEnvio"/>
+        <NamedIndividual IRI="#Envio2"/>
+        <Literal>En tránsito</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#fechaEnvio"/>
+        <NamedIndividual IRI="#Envio2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-06T11:30:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idEnvio"/>
+        <NamedIndividual IRI="#Envio2"/>
+        <Literal>ENV002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroSeguimiento"/>
+        <NamedIndividual IRI="#Envio2"/>
+        <Literal>EE78945612345</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#transportista"/>
+        <NamedIndividual IRI="#Envio2"/>
+        <Literal>EnvíosExpress</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#emailAsociado"/>
+        <NamedIndividual IRI="#Pago1"/>
+        <Literal>ana123@gmail.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#estadoPago"/>
+        <NamedIndividual IRI="#Pago1"/>
+        <Literal>Completado</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#fechaPago"/>
+        <NamedIndividual IRI="#Pago1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2025-02-04T00:02:22</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idTransaccion"/>
+        <NamedIndividual IRI="#Pago1"/>
+        <Literal>PAG0002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#proveedorPago"/>
+        <NamedIndividual IRI="#Pago1"/>
+        <Literal>Banco Nacional de Bolivia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tipoPago"/>
+        <NamedIndividual IRI="#Pago1"/>
+        <Literal>Digital QR</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#cuentaDigital"/>
+        <NamedIndividual IRI="#PagoDigital1"/>
+        <Literal>anamartinez@ejemplo.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#estadoPago"/>
+        <NamedIndividual IRI="#PagoDigital1"/>
+        <Literal>Completado</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#fechaPago"/>
+        <NamedIndividual IRI="#PagoDigital1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-05T09:20:15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idTransaccion"/>
+        <NamedIndividual IRI="#PagoDigital1"/>
+        <Literal>PAG0004</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#plataformaPago"/>
+        <NamedIndividual IRI="#PagoDigital1"/>
+        <Literal>PayPal</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tipoPago"/>
+        <NamedIndividual IRI="#PagoDigital1"/>
+        <Literal>Digital</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#estadoPedido"/>
+        <NamedIndividual IRI="#Pedido1"/>
+        <Literal>Entregado</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#fechaCreacion"/>
+        <NamedIndividual IRI="#Pedido1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2025-02-23T12:22:33</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idPedido"/>
+        <NamedIndividual IRI="#Pedido1"/>
+        <Literal>PED001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total"/>
+        <NamedIndividual IRI="#Pedido1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">400</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#estadoPedido"/>
+        <NamedIndividual IRI="#Pedido2"/>
+        <Literal>En proceso</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#fechaCreacion"/>
+        <NamedIndividual IRI="#Pedido2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-08T15:30:10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idPedido"/>
+        <NamedIndividual IRI="#Pedido2"/>
+        <Literal>PED002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total"/>
+        <NamedIndividual IRI="#Pedido2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">750.99</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#estadoPedido"/>
+        <NamedIndividual IRI="#Pedido3"/>
+        <Literal>Pagado</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#fechaCreacion"/>
+        <NamedIndividual IRI="#Pedido3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-05T09:15:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idPedido"/>
+        <NamedIndividual IRI="#Pedido3"/>
+        <Literal>PED003</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#total"/>
+        <NamedIndividual IRI="#Pedido3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1389.98</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#comentario"/>
+        <NamedIndividual IRI="#Resena2"/>
+        <Literal>Excelente smartphone, la batería dura todo el día y la cámara es increíble.</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#fechaResena"/>
+        <NamedIndividual IRI="#Resena2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-01T16:45:00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idResena"/>
+        <NamedIndividual IRI="#Resena2"/>
+        <Literal>RES002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#puntuacion"/>
+        <NamedIndividual IRI="#Resena2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#disponibilidad"/>
+        <NamedIndividual IRI="#Software2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#formato"/>
+        <NamedIndividual IRI="#Software2"/>
+        <Literal>Descarga digital</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idProducto"/>
+        <NamedIndividual IRI="#Software2"/>
+        <Literal>S002</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#licencia"/>
+        <NamedIndividual IRI="#Software2"/>
+        <Literal>Perpetua</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#Software2"/>
+        <Literal>Suite Diseño Profesional</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#precio"/>
+        <NamedIndividual IRI="#Software2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">249.99</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#requisitosMinimos"/>
+        <NamedIndividual IRI="#Software2"/>
+        <Literal>16GB RAM, i5 o superior</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#versionSoftware"/>
+        <NamedIndividual IRI="#Software2"/>
+        <Literal>2025</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#email"/>
+        <NamedIndividual IRI="#Vendedor2"/>
+        <Literal>carlosruiz@tienda.com</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombreUsuarios"/>
+        <NamedIndividual IRI="#Vendedor2"/>
+        <Literal>Carlos Ruiz</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#reputacion"/>
+        <NamedIndividual IRI="#Vendedor2"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">4.7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#telefono"/>
+        <NamedIndividual IRI="#Vendedor2"/>
+        <Literal>678123456</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#autor"/>
+        <NamedIndividual IRI="#libro1"/>
+        <Literal>Antoine de Saint-Exupéry</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#disponibilidad"/>
+        <NamedIndividual IRI="#libro1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#formato"/>
+        <NamedIndividual IRI="#libro1"/>
+        <Literal>PDF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idProducto"/>
+        <NamedIndividual IRI="#libro1"/>
+        <Literal>E001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idioma"/>
+        <NamedIndividual IRI="#libro1"/>
+        <Literal>Español</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#licencia"/>
+        <NamedIndividual IRI="#libro1"/>
+        <Literal>Libre</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#libro1"/>
+        <Literal>El Principito</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#numeroPaginas"/>
+        <NamedIndividual IRI="#libro1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">96</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#precio"/>
+        <NamedIndividual IRI="#libro1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9.99</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tamanoArchivo"/>
+        <NamedIndividual IRI="#libro1"/>
+        <Literal>1MB</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#disponibilidad"/>
+        <NamedIndividual IRI="#software1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#formato"/>
+        <NamedIndividual IRI="#software1"/>
+        <Literal>EXE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#idProducto"/>
+        <NamedIndividual IRI="#software1"/>
+        <Literal>S001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#licencia"/>
+        <NamedIndividual IRI="#software1"/>
+        <Literal>Comercial</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#nombre"/>
+        <NamedIndividual IRI="#software1"/>
+        <Literal>Photoshop</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#precio"/>
+        <NamedIndividual IRI="#software1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20.00</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#requisitosSistema"/>
+        <NamedIndividual IRI="#software1"/>
+        <Literal>8GB RAM, CPU i5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#sistemaOperativo"/>
+        <NamedIndividual IRI="#software1"/>
+        <Literal>Windows/Mac</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#tamanoArchivo"/>
+        <NamedIndividual IRI="#software1"/>
+        <Literal>2GB</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#version"/>
+        <NamedIndividual IRI="#software1"/>
+        <Literal>2024</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#PagoRelacionado"/>
+        <Class IRI="#Pedido"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#autor"/>
+        <Class IRI="#Ebook"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#autor"/>
+        <Class IRI="#Reseña"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#cliente"/>
+        <Class IRI="#Pedido"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#envio"/>
+        <Class IRI="#Pedido"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#estado"/>
+        <Class IRI="#Envio"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#estado"/>
+        <Class IRI="#Pedido"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#productoRelacionado"/>
+        <Class IRI="#Reseña"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#productos"/>
+        <Class IRI="#Pedido"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#vendedor"/>
+        <Class IRI="#Producto"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#PagoRelacionado"/>
+        <Class IRI="#Pago"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#cliente"/>
+        <Class IRI="#Cliente"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#envio"/>
+        <Class IRI="#Envio"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#productoRelacionado"/>
+        <Class IRI="#Producto"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#productos"/>
+        <Class IRI="#Producto"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#vendedor"/>
+        <Class IRI="#Vendedor"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#aranceles"/>
+        <Class IRI="#EnvioInternacional"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#categoria"/>
+        <Class IRI="#Producto"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#cobertura"/>
+        <Class IRI="#EnvioNacional"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#compatibilidad"/>
+        <Class IRI="#Accesorio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#consumoEnergia"/>
+        <Class IRI="#Electronico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#costo"/>
+        <Class IRI="#Envio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#descripcion"/>
+        <Class IRI="#Producto"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#descuentosAplicados"/>
+        <Class IRI="#Carrito"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#dimensiones"/>
+        <Class IRI="#ProductoFisico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#disponibilidad"/>
+        <Class IRI="#Producto"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#documentacion_requerida"/>
+        <Class IRI="#EnvioInternacional"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#duracion"/>
+        <Class IRI="#CursoOnline"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#email"/>
+        <Class IRI="#Usuario"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#emailAsociado"/>
+        <Class IRI="#PagoDigital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#emisorTarjeta"/>
+        <Class IRI="#PagoTarjeta"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#estadoEnvio"/>
+        <Class IRI="#Envio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#estadoPago"/>
+        <Class IRI="#Pago"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#estadoPedido"/>
+        <Class IRI="#Pedido"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#fecha"/>
+        <Class IRI="#Reseña"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#fechaCreacion"/>
+        <Class IRI="#Pedido"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#fechaPago"/>
+        <Class IRI="#Pago"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#fechaUltimaModificacion"/>
+        <Class IRI="#Carrito"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#formato"/>
+        <Class IRI="#ProductoDigital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#garantia"/>
+        <Class IRI="#Electronico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#idEnvio"/>
+        <Class IRI="#Envio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#idPedido"/>
+        <Class IRI="#Pedido"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#idProducto"/>
+        <Class IRI="#Producto"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#idReseña"/>
+        <Class IRI="#Reseña"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#idTransaccion"/>
+        <Class IRI="#Pago"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#idioma"/>
+        <Class IRI="#Ebook"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#impuesto_local"/>
+        <Class IRI="#EnvioNacional"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#instructor"/>
+        <Class IRI="#CursoOnline"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#licencia"/>
+        <Class IRI="#ProductoDigital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#likes"/>
+        <Class IRI="#ReseñaTexto"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#material"/>
+        <Class IRI="#ProductoFisico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#moneda"/>
+        <Class IRI="#Efectivo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#moneda"/>
+        <Class IRI="#EnvioInternacional"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#monto"/>
+        <Class IRI="#Efectivo"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nivel"/>
+        <Class IRI="#CursoOnline"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombre"/>
+        <Class IRI="#Producto"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#nombreUsuarios"/>
+        <Class IRI="#Usuario"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#numeroPaginas"/>
+        <Class IRI="#Ebook"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#pais_destino"/>
+        <Class IRI="#EnvioInternacional"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#peso"/>
+        <Class IRI="#Envio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#peso"/>
+        <Class IRI="#ProductoFisico"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#precio"/>
+        <Class IRI="#Producto"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#proveedorPago"/>
+        <Class IRI="#PagoDigital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#puntuacion"/>
+        <Class IRI="#Calificacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#recomendado"/>
+        <Class IRI="#Calificacion"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#requisitosSistema"/>
+        <Class IRI="#Software"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#respuestas"/>
+        <Class IRI="#ReseñaTexto"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#restricciones"/>
+        <Class IRI="#EnvioInternacional"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sistemaOperativo"/>
+        <Class IRI="#Software"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tamanoArchivo"/>
+        <Class IRI="#ProductoDigital"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#telefono"/>
+        <Class IRI="#Usuario"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#texto"/>
+        <Class IRI="#ReseñaTexto"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tipoAccesorio"/>
+        <Class IRI="#Accesorio"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tipoPago"/>
+        <Class IRI="#Pago"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tipoTarjeta"/>
+        <Class IRI="#PagoTarjeta"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#tipo_servicio"/>
+        <Class IRI="#EnvioNacional"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#total"/>
+        <Class IRI="#Pedido"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ultimosCuatroDigitos"/>
+        <Class IRI="#PagoTarjeta"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#version"/>
+        <Class IRI="#Software"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#voltaje"/>
+        <Class IRI="#Electronico"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#aranceles"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#autor"/>
+        <Datatype IRI="#Cliente"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#autor"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#categoria"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#cobertura"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#compatibilidad"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#consumoEnergia"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#costo"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#descripcion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#descuentosAplicados"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#dimensiones"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#disponibilidad"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#documentacion_requerida"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#duracion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#email"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#emailAsociado"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#emisorTarjeta"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#estadoEnvio"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#estadoPago"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#estadoPedido"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#fecha"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#fechaCreacion"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#fechaPago"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#fechaUltimaModificacion"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#formato"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#garantia"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#idEnvio"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#idPedido"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#idProducto"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#idReseña"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#idTransaccion"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#idioma"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#impuesto_local"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#instructor"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#licencia"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#likes"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#material"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#moneda"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#monto"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nivel"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombre"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#nombreUsuarios"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#numeroPaginas"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#pais_destino"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#peso"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#precio"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#proveedorPago"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#puntuacion"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#recomendado"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#requisitosSistema"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#respuestas"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#restricciones"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sistemaOperativo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tamanoArchivo"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#telefono"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#texto"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tipoAccesorio"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tipoPago"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tipoTarjeta"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#tipo_servicio"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#total"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ultimosCuatroDigitos"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#version"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#voltaje"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
