@@ -1,0 +1,1277 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.ejemplo.org/ontologia#"
+     xml:base="http://www.ejemplo.org/ontologia"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontologia="http://www.ejemplo.org/ontologia#">
+    <owl:Ontology rdf:about="http://www.ejemplo.org/ontologia"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#PagoRelacionado -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo.org/ontologia#PagoRelacionado">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Pedido"/>
+        <rdfs:range rdf:resource="http://www.ejemplo.org/ontologia#Pago"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#autor -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo.org/ontologia#autor">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Ebook"/>
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Reseña"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#cliente -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo.org/ontologia#cliente">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Pedido"/>
+        <rdfs:range rdf:resource="http://www.ejemplo.org/ontologia#Cliente"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#envio -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo.org/ontologia#envio">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Pedido"/>
+        <rdfs:range rdf:resource="http://www.ejemplo.org/ontologia#Envio"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#estado -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo.org/ontologia#estado">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Envio"/>
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Pedido"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#pago -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo.org/ontologia#pago"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#producto -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo.org/ontologia#producto"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#productoRelacionado -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo.org/ontologia#productoRelacionado">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Reseña"/>
+        <rdfs:range rdf:resource="http://www.ejemplo.org/ontologia#Producto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#productos -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo.org/ontologia#productos">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Pedido"/>
+        <rdfs:range rdf:resource="http://www.ejemplo.org/ontologia#Producto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#vendedor -->
+
+    <owl:ObjectProperty rdf:about="http://www.ejemplo.org/ontologia#vendedor">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Producto"/>
+        <rdfs:range rdf:resource="http://www.ejemplo.org/ontologia#Vendedor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#aranceles -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#aranceles">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#EnvioInternacional"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#autor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#autor">
+        <rdfs:range rdf:resource="http://www.ejemplo.org/ontologia#Cliente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#cantidadPaginas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#cantidadPaginas"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#categoria -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#categoria">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Producto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#cobertura -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#cobertura">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#EnvioNacional"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#comentario -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#comentario"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#compatibilidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#compatibilidad">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Accesorio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#consumoEnergia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#consumoEnergia">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Electronico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#costo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#costo">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Envio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#cuentaDigital -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#cuentaDigital"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#descripcion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#descripcion">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Producto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#descuentosAplicados -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#descuentosAplicados">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Carrito"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#dimensiones -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#dimensiones">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#ProductoFisico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#direccionEntrega -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#direccionEntrega"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#disponibilidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#disponibilidad">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Producto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#documentacion_requerida -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#documentacion_requerida">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#EnvioInternacional"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#duracion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#duracion">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#CursoOnline"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#editorial -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#editorial"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#email">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#emailAsociado -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#emailAsociado">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#PagoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#emisorTarjeta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#emisorTarjeta">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#PagoTarjeta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#estadoEnvio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#estadoEnvio">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Envio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#estadoPago -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#estadoPago">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Pago"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#estadoPedido -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#estadoPedido">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Pedido"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#fecha -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#fecha">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Reseña"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#fechaCreacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#fechaCreacion">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Pedido"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#fechaEnvio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#fechaEnvio"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#fechaPago -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#fechaPago">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Pago"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#fechaResena -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#fechaResena"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#fechaUltimaModificacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#fechaUltimaModificacion">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Carrito"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#formato -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#formato">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#ProductoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#garantia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#garantia">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Electronico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#idEnvio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#idEnvio">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Envio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#idPedido -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#idPedido">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Pedido"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#idProducto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#idProducto">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Producto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#idResena -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#idResena"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#idReseña -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#idReseña">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Reseña"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#idTransaccion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#idTransaccion">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Pago"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#idioma -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#idioma">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Ebook"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#impuesto_local -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#impuesto_local">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#EnvioNacional"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#instructor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#instructor">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#CursoOnline"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#licencia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#licencia">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#ProductoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#likes -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#likes">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#ReseñaTexto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#material -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#material">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#ProductoFisico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#moneda -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#moneda">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Efectivo"/>
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#EnvioInternacional"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#monto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#monto">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Efectivo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#nivel -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#nivel">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#CursoOnline"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#nombre -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#nombre">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Producto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#nombreUsuarios -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#nombreUsuarios">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#numeroPaginas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#numeroPaginas">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Ebook"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#numeroSeguimiento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#numeroSeguimiento"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#pais_destino -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#pais_destino">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#EnvioInternacional"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#peso -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#peso">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Envio"/>
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#ProductoFisico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#plataformaPago -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#plataformaPago"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#precio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#precio">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Producto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#proveedorPago -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#proveedorPago">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#PagoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#puntuacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#puntuacion">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Calificacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#recomendado -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#recomendado">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Calificacion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#reputacion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#reputacion"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#requisitosMinimos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#requisitosMinimos"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#requisitosSistema -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#requisitosSistema">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#respuestas -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#respuestas">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#ReseñaTexto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#restricciones -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#restricciones">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#EnvioInternacional"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#sistemaOperativo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#sistemaOperativo">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#tamanoArchivo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#tamanoArchivo">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#ProductoDigital"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#telefono -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#telefono">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Usuario"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#texto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#texto">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#ReseñaTexto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#tipoAccesorio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#tipoAccesorio">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Accesorio"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#tipoPago -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#tipoPago">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Pago"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#tipoTarjeta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#tipoTarjeta">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#PagoTarjeta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#tipo_servicio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#tipo_servicio">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#EnvioNacional"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#total -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#total">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Pedido"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#transportista -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#transportista"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#ultimosCuatroDigitos -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#ultimosCuatroDigitos">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#PagoTarjeta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#version -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#version">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Software"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#versionSoftware -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#versionSoftware"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#voltaje -->
+
+    <owl:DatatypeProperty rdf:about="http://www.ejemplo.org/ontologia#voltaje">
+        <rdfs:domain rdf:resource="http://www.ejemplo.org/ontologia#Electronico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Accesorio -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#Accesorio">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#ProductoFisico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Calificacion -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#Calificacion">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Reseña"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Carrito -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#Carrito">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Pedido"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Cliente -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#Cliente">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Usuario"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#ComercioElectronico -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#ComercioElectronico"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#CursoOnline -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#CursoOnline">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#ProductoDigital"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Ebook -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#Ebook">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#ProductoDigital"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Efectivo -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#Efectivo">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Pago"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Electronico -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#Electronico">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#ProductoFisico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Envio -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#Envio">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Producto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#EnvioInternacional -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#EnvioInternacional">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Envio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#EnvioNacional -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#EnvioNacional">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Envio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Pago -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#Pago">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Pedido"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#PagoDigital -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#PagoDigital">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Pago"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#PagoTarjeta -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#PagoTarjeta">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Pago"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Pedido -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#Pedido">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#ComercioElectronico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Producto -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#Producto">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Pedido"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#ProductoDigital -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#ProductoDigital">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Producto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#ProductoFisico -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#ProductoFisico">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Producto"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Resena -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#Resena">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Reseña"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Reseña -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#Reseña">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Envio"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#ReseñaTexto -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#ReseñaTexto">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Reseña"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Software -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#Software">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#ProductoDigital"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Usuario -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#Usuario"/>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Vendedor -->
+
+    <owl:Class rdf:about="http://www.ejemplo.org/ontologia#Vendedor">
+        <rdfs:subClassOf rdf:resource="http://www.ejemplo.org/ontologia#Usuario"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Accesorio1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#Accesorio1">
+        <rdf:type rdf:resource="http://www.ejemplo.org/ontologia#Accesorio"/>
+        <productos rdf:resource="http://www.ejemplo.org/ontologia#Pedido1"/>
+        <categoria>Accesorios</categoria>
+        <categoria>Audio</categoria>
+        <compatibilidad>Audifonos</compatibilidad>
+        <compatibilidad>Universal</compatibilidad>
+        <disponibilidad rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</disponibilidad>
+        <idProducto>A001</idProducto>
+        <idProducto>PRO003</idProducto>
+        <material>Plastico</material>
+        <material>Plástico y silicona</material>
+        <nombre>Audifonos de cable Tomate</nombre>
+        <nombre>Audífonos Bluetooth Premium</nombre>
+        <peso rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</peso>
+        <precio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</precio>
+        <precio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">89.99</precio>
+        <tipoAccesorio>Audifonos</tipoAccesorio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Cliente1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#Cliente1">
+        <email>ana123@gmail.com</email>
+        <nombreUsuarios>Ana Smith</nombreUsuarios>
+        <telefono>787655253</telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Cliente2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#Cliente2">
+        <rdf:type rdf:resource="http://www.ejemplo.org/ontologia#Cliente"/>
+        <email>juanperez@gmail.com</email>
+        <nombreUsuarios>Juan Pérez</nombreUsuarios>
+        <telefono>789456123</telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Cliente3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#Cliente3">
+        <rdf:type rdf:resource="http://www.ejemplo.org/ontologia#Cliente"/>
+        <email>anamartinez@ejemplo.com</email>
+        <nombreUsuarios>Ana Martínez</nombreUsuarios>
+        <telefono>645789321</telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Ebook2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#Ebook2">
+        <rdf:type rdf:resource="http://www.ejemplo.org/ontologia#Ebook"/>
+        <autor>Dra. Elena Gómez</autor>
+        <cantidadPaginas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">325</cantidadPaginas>
+        <categoria>Informática</categoria>
+        <disponibilidad rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</disponibilidad>
+        <editorial>TechBooks</editorial>
+        <formato>PDF, EPUB</formato>
+        <idProducto>EB002</idProducto>
+        <licencia>Individual</licencia>
+        <nombre>Guía Avanzada de Ontologías</nombre>
+        <precio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.99</precio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Electronico1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#Electronico1">
+        <rdf:type rdf:resource="http://www.ejemplo.org/ontologia#Electronico"/>
+        <categoria>Celulares</categoria>
+        <consumoEnergia>5W</consumoEnergia>
+        <disponibilidad rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</disponibilidad>
+        <garantia>12 meses</garantia>
+        <idProducto>E001</idProducto>
+        <material>Metal y vidrio</material>
+        <nombre>Smartphone Galaxy</nombre>
+        <peso rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">180</peso>
+        <precio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">699.99</precio>
+        <voltaje>5V</voltaje>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Electronico2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#Electronico2">
+        <rdf:type rdf:resource="http://www.ejemplo.org/ontologia#Electronico"/>
+        <categoria>Computadoras</categoria>
+        <consumoEnergia>65W</consumoEnergia>
+        <disponibilidad rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</disponibilidad>
+        <garantia>24 meses</garantia>
+        <idProducto>E002</idProducto>
+        <nombre>Laptop UltraBook Pro</nombre>
+        <peso rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</peso>
+        <precio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1299.99</precio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Envio1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#Envio1">
+        <cobertura>Nacional</cobertura>
+        <costo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500</costo>
+        <estadoEnvio>Entregado</estadoEnvio>
+        <idEnvio>ENV001</idEnvio>
+        <impuesto_local rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50</impuesto_local>
+        <peso rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300</peso>
+        <tipo_servicio>Estandar</tipo_servicio>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Envio2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#Envio2">
+        <rdf:type rdf:resource="http://www.ejemplo.org/ontologia#Envio"/>
+        <direccionEntrega>Calle Principal 123, Ciudad</direccionEntrega>
+        <estadoEnvio>En tránsito</estadoEnvio>
+        <fechaEnvio rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-06T11:30:00</fechaEnvio>
+        <idEnvio>ENV002</idEnvio>
+        <numeroSeguimiento>EE78945612345</numeroSeguimiento>
+        <transportista>EnvíosExpress</transportista>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Pago1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#Pago1">
+        <PagoRelacionado rdf:resource="http://www.ejemplo.org/ontologia#Pedido1"/>
+        <emailAsociado>ana123@gmail.com</emailAsociado>
+        <estadoPago>Completado</estadoPago>
+        <fechaPago rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-02-04T00:02:22</fechaPago>
+        <idTransaccion>PAG0002</idTransaccion>
+        <proveedorPago>Banco Nacional de Bolivia</proveedorPago>
+        <tipoPago>Digital QR</tipoPago>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#PagoDigital1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#PagoDigital1">
+        <rdf:type rdf:resource="http://www.ejemplo.org/ontologia#PagoDigital"/>
+        <cuentaDigital>anamartinez@ejemplo.com</cuentaDigital>
+        <estadoPago>Completado</estadoPago>
+        <fechaPago rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-05T09:20:15</fechaPago>
+        <idTransaccion>PAG0004</idTransaccion>
+        <plataformaPago>PayPal</plataformaPago>
+        <tipoPago>Digital</tipoPago>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Pedido1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#Pedido1">
+        <cliente rdf:resource="http://www.ejemplo.org/ontologia#Cliente1"/>
+        <envio rdf:resource="http://www.ejemplo.org/ontologia#Envio1"/>
+        <estadoPedido>Entregado</estadoPedido>
+        <fechaCreacion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-02-23T12:22:33</fechaCreacion>
+        <idPedido>PED001</idPedido>
+        <total rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400</total>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Pedido2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#Pedido2">
+        <rdf:type rdf:resource="http://www.ejemplo.org/ontologia#Pedido"/>
+        <cliente rdf:resource="http://www.ejemplo.org/ontologia#Cliente2"/>
+        <estadoPedido>En proceso</estadoPedido>
+        <fechaCreacion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-08T15:30:10</fechaCreacion>
+        <idPedido>PED002</idPedido>
+        <total rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">750.99</total>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Pedido3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#Pedido3">
+        <rdf:type rdf:resource="http://www.ejemplo.org/ontologia#Pedido"/>
+        <cliente rdf:resource="http://www.ejemplo.org/ontologia#Cliente3"/>
+        <envio rdf:resource="http://www.ejemplo.org/ontologia#Envio2"/>
+        <pago rdf:resource="http://www.ejemplo.org/ontologia#PagoDigital1"/>
+        <vendedor rdf:resource="http://www.ejemplo.org/ontologia#Vendedor2"/>
+        <estadoPedido>Pagado</estadoPedido>
+        <fechaCreacion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-05T09:15:00</fechaCreacion>
+        <idPedido>PED003</idPedido>
+        <total rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1389.98</total>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Resena2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#Resena2">
+        <rdf:type rdf:resource="http://www.ejemplo.org/ontologia#Resena"/>
+        <cliente rdf:resource="http://www.ejemplo.org/ontologia#Cliente2"/>
+        <producto rdf:resource="http://www.ejemplo.org/ontologia#Electronico1"/>
+        <comentario>Excelente smartphone, la batería dura todo el día y la cámara es increíble.</comentario>
+        <fechaResena rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-04-01T16:45:00</fechaResena>
+        <idResena>RES002</idResena>
+        <puntuacion rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</puntuacion>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Software2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#Software2">
+        <rdf:type rdf:resource="http://www.ejemplo.org/ontologia#Software"/>
+        <disponibilidad rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</disponibilidad>
+        <formato>Descarga digital</formato>
+        <idProducto>S002</idProducto>
+        <licencia>Perpetua</licencia>
+        <nombre>Suite Diseño Profesional</nombre>
+        <precio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">249.99</precio>
+        <requisitosMinimos>16GB RAM, i5 o superior</requisitosMinimos>
+        <versionSoftware>2025</versionSoftware>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#Vendedor2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#Vendedor2">
+        <rdf:type rdf:resource="http://www.ejemplo.org/ontologia#Vendedor"/>
+        <email>carlosruiz@tienda.com</email>
+        <nombreUsuarios>Carlos Ruiz</nombreUsuarios>
+        <reputacion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.7</reputacion>
+        <telefono>678123456</telefono>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#libro1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#libro1">
+        <rdf:type rdf:resource="http://www.ejemplo.org/ontologia#Ebook"/>
+        <autor>Antoine de Saint-Exupéry</autor>
+        <disponibilidad rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</disponibilidad>
+        <formato>PDF</formato>
+        <idProducto>E001</idProducto>
+        <idioma>Español</idioma>
+        <licencia>Libre</licencia>
+        <nombre>El Principito</nombre>
+        <numeroPaginas rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</numeroPaginas>
+        <precio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.99</precio>
+        <tamanoArchivo>1MB</tamanoArchivo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.ejemplo.org/ontologia#software1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.ejemplo.org/ontologia#software1">
+        <rdf:type rdf:resource="http://www.ejemplo.org/ontologia#Software"/>
+        <disponibilidad rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</disponibilidad>
+        <formato>EXE</formato>
+        <idProducto>S001</idProducto>
+        <licencia>Comercial</licencia>
+        <nombre>Photoshop</nombre>
+        <precio rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.00</precio>
+        <requisitosSistema>8GB RAM, CPU i5</requisitosSistema>
+        <sistemaOperativo>Windows/Mac</sistemaOperativo>
+        <tamanoArchivo>2GB</tamanoArchivo>
+        <version>2024</version>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

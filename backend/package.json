@@ -1,0 +1,17 @@
+{
+  "name": "backend-buscador",
+  "version": "1.0.0",
+  "description": "Backend para el buscador semántico con ontología OWL",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "@comunica/query-sparql": "^2.10.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "n3": "^1.14.3",
+    "rdf-parse": "^2.3.3"
+  }
+}
