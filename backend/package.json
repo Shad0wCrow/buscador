@@ -8,10 +8,13 @@
     "start": "node src/app.js"
   },
   "dependencies": {
-    "@comunica/query-sparql": "^2.10.1",
+    "@comunica/query-sparql": "^2.10.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "n3": "^1.14.3",
-    "rdf-parse": "^2.3.3"
+    "node-fetch": "^3.3.2",
+    "rdf-parse": "^2.3.3",
+    "rdflib": "^2.2.37",
+    "sparql-client-2": "^0.6.3"
   }
 }
