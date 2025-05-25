@@ -32,6 +32,13 @@
 .formulario {
   display: flex;
   gap: 0.5rem;
+  align-items: center;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .formulario input {
@@ -40,6 +47,16 @@
   border: 2px solid #c7d2fe;
   border-radius: 9999px;
   font-size: 1rem;
+}
+
+.selector {
+  padding: 0.5rem;
+  border: 2px solid #c7d2fe;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  background-color: white;
+  color: #4f46e5;
+  cursor: pointer;
 }
 
 .formulario button {
@@ -86,4 +103,17 @@
 .descripcion {
   font-size: 0.95rem;
   color: #4d5156;
+  margin-bottom: 0.5rem;
+}
+
+.fuente {
+  font-size: 0.8rem;
+  color: #70757a;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.idioma {
+  font-weight: bold;
 }

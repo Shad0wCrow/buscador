@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import styles from "../styles/buscador.module.css";
 import { buscar } from "../api/buscar";
-import type { RawSearchResult, Resultado } from "../types";
+import type { RawSearchResult, Resultado, IdiomaSeleccionado } from "../types";
 
 
 // Diccionario para mostrar etiquetas legibles en vez de URLs de predicados
@@ -22,47 +22,57 @@ const etiquetasPredicado: Record<string, string> = {
 
 function PaginaInicio() {
   const [busqueda, setBusqueda] = useState("");
-  // mantén el tipo any[] si no quieres definir ahora una interfaz
+  const [idioma, setIdioma] = useState<IdiomaSeleccionado>("both");
   const [resultados, setResultados] = useState<Resultado[]>([]);
   const [mostrarResultados, setMostrarResultados] = useState(false);
-  const [, setParametros] = useSearchParams(); // ya no hay '_' sin usar
+  const [, setParametros] = useSearchParams();
 
   const manejarEnvio = async (e: React.FormEvent) => {
-     e.preventDefault();
+    e.preventDefault();
     if (!busqueda.trim()) return;
 
     try {
-      //const respuesta = await buscar(busqueda);
-      // Le decimos a TS que respuesta.ontologia es un array de RawSearchResult
-      const crudos = (await buscar(busqueda)) as RawSearchResult[];
+      const crudos = (await buscar(busqueda, idioma)) as RawSearchResult[];
       
-      // Lo transformamos a tu tipo limpio
+      // Lo transformamos a nuestro tipo limpio
       const transformados: Resultado[] = crudos.map(r => ({
         url:         r.sujeto,
         titulo:      r.predicado,
         descripcion: r.objeto,
+        idioma:      r.objeto, // En DBpedia, objeto contiene el código de idioma
+        fuente:      r.fuente || "Desconocida"
       }));
 
       setResultados(transformados);
       setMostrarResultados(true);
-      setParametros({ q: busqueda });
+      setParametros({ q: busqueda, lang: idioma });
     } catch (err: unknown) {
       console.error("Error en la búsqueda:", err);
     }
   };
-
 
   return (
     <div className={ mostrarResultados ? styles.contenedorResultados : styles.contenedorInicio }>
       <div className={styles.superior}>
         <h1 className={styles.logo}>SmartSearch</h1>
         <form onSubmit={manejarEnvio} className={styles.formulario}>
-          <input
-            type="text"
-            placeholder="Buscar..."
-            value={busqueda}
-            onChange={(e) => setBusqueda(e.target.value)}
-          />
+          <div className={styles.inputGroup}>
+            <input
+              type="text"
+              placeholder="Buscar..."
+              value={busqueda}
+              onChange={(e) => setBusqueda(e.target.value)}
+            />
+            <select 
+              value={idioma} 
+              onChange={(e) => setIdioma(e.target.value as IdiomaSeleccionado)}
+              className={styles.selector}
+            >
+              <option value="both">Español e Inglés</option>
+              <option value="es">Solo Español</option>
+              <option value="en">Solo Inglés</option>
+            </select>
+          </div>
           <button type="submit">Buscar</button>
         </form>
       </div>
@@ -75,6 +85,14 @@ function PaginaInicio() {
                 {etiquetasPredicado[r.titulo] || r.titulo}
               </div>
               <div className={styles.descripcion}>{r.descripcion}</div>
+              {r.fuente && (
+                <div className={styles.fuente}>
+                  Fuente: {r.fuente}
+                  {r.idioma && r.fuente === "DBpedia" && (
+                    <span className={styles.idioma}> ({r.idioma})</span>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>
