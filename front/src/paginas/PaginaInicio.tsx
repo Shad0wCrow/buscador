@@ -22,7 +22,7 @@ const etiquetasPredicado: Record<string, string> = {
 
 function PaginaInicio() {
   const [busqueda, setBusqueda] = useState("");
-  const [idioma, setIdioma] = useState<IdiomaSeleccionado>("both");
+  const [idioma, setIdioma] = useState<IdiomaSeleccionado>("all");
   const [resultados, setResultados] = useState<Resultado[]>([]);
   const [mostrarResultados, setMostrarResultados] = useState(false);
   const [, setParametros] = useSearchParams();
@@ -68,9 +68,10 @@ function PaginaInicio() {
               onChange={(e) => setIdioma(e.target.value as IdiomaSeleccionado)}
               className={styles.selector}
             >
-              <option value="both">Español e Inglés</option>
+              <option value="all">Todos los idiomas</option>
               <option value="es">Solo Español</option>
               <option value="en">Solo Inglés</option>
+              <option value="fr">Solo Francés</option>
             </select>
           </div>
           <button type="submit">Buscar</button>

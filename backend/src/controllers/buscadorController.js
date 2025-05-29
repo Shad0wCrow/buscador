@@ -5,6 +5,8 @@ const endpointUrl = 'https://dbpedia.org/sparql';  // Mejor HTTPS
 
 const buscar = async (req, res) => {
   const termino = req.query.q;  
+  const idioma = req.query.lang || 'all'; // Puede ser 'es', 'en', 'fr' o 'all' (default)
+  
   if (!termino) {
     return res.status(400).json({ error: "Falta el parámetro de búsqueda" });
   }
@@ -13,22 +15,35 @@ const buscar = async (req, res) => {
     console.log("📌 [LOCAL] Iniciando búsqueda en ontología local con término:", termino);
     // 1) Buscamos en la ontología local
     const resultadosOntologia = await ontologiaService.buscarEnOntologia(termino);
-   console.log("✅ [LOCAL] Resultados ontología local:", resultadosOntologia);
+    console.log("✅ [LOCAL] Resultados ontología local:", resultadosOntologia);
 
-    // 2) Preparamos la consulta SPARQL para DBpedia
+    // 2) Preparamos la consulta SPARQL para DBpedia según el idioma solicitado
+    let filtroIdioma;
+    if (idioma === 'es') {
+      filtroIdioma = 'lang(?label) = "es"';
+    } else if (idioma === 'en') {
+      filtroIdioma = 'lang(?label) = "en"';
+    } else if (idioma === 'fr') {
+      filtroIdioma = 'lang(?label) = "fr"';
+    } else {
+      // Por defecto, buscar en los tres idiomas
+      filtroIdioma = '(lang(?label) = "es" || lang(?label) = "en" || lang(?label) = "fr")';
+    }
+
     const sparqlQuery = `
       PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-      SELECT DISTINCT ?s ?label WHERE {
+      SELECT DISTINCT ?s ?label ?lang WHERE {
         ?s rdfs:label ?label .
+        BIND(lang(?label) AS ?lang)
         FILTER(
-          lang(?label) = "en" &&
+          ${filtroIdioma} &&
           CONTAINS(
             LCASE(STR(?label)),
             "${termino.toLowerCase()}"
           )
         )
       }
-      LIMIT 20
+      LIMIT 60
     `;
 
     // 3) Ejecutamos la consulta vía GET pidiendo JSON
@@ -49,12 +64,19 @@ const buscar = async (req, res) => {
     const resultadosDBpedia = (dbData.results?.bindings || []).map(b => ({
       sujeto:    b.s.value,
       predicado: b.label.value,
-      objeto:    ""            // aquí podrías añadir otro campo si lo necesitas
+      objeto:    b.lang?.value || "",    // Incluimos el idioma como objeto
+      fuente:    "DBpedia"               // Marcamos la fuente
     }));
 
-    // 6) Devolvemos UN SOLO ARRAY concatenando local + DBpedia
+    // 6) Añadimos fuente a los resultados de la ontología local
+    const resultadosOntologiaConFuente = resultadosOntologia.map(r => ({
+      ...r,
+      fuente: "Ontología Local"
+    }));
+
+    // 7) Devolvemos UN SOLO ARRAY concatenando local + DBpedia
     res.json([
-      ...resultadosOntologia,
+      ...resultadosOntologiaConFuente,
       ...resultadosDBpedia
     ]);
 

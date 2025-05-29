@@ -9,8 +9,8 @@ export interface Resultado {
   url:         string;
   titulo:      string;
   descripcion: string;
-  idioma?:     string;  // "es", "en" u otro código de idioma
+  idioma?:     string;  // "es", "en", "fr" u otro código de idioma
   fuente?:     string;  // Origen del resultado
 }
 
-export type IdiomaSeleccionado = "es" | "en" | "both";
+export type IdiomaSeleccionado = "es" | "en" | "fr" | "all";
