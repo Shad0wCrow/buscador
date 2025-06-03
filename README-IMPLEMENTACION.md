@@ -6,7 +6,6 @@
 2. [Implementación de Multilingualidad](#implementación-de-multilingualidad)
 3. [Conexión a DBpedia](#conexión-a-dbpedia)
 4. [Redireccionamiento de Links](#redireccionamiento-de-links)
-5. [Flujo de Datos Completo](#flujo-de-datos-completo)
 
 ---
 
@@ -361,69 +360,3 @@ esUrlValida() verifica formato de URL
 │ Nueva pestaña   │ Portapapeles    │
 └─────────────────┴─────────────────┘
 ```
-
-### 3. **Estructura de Datos**
-
-```typescript
-// Formato de entrada desde backend
-interface RawSearchResult {
-  sujeto: string; // URL del recurso
-  predicado: string; // Propiedad o etiqueta
-  objeto: string; // Valor o idioma
-  fuente?: string; // "DBpedia" | "Ontología Local"
-}
-
-// Formato transformado en frontend
-interface Resultado {
-  url: string; // URL clickeable
-  titulo: string; // Título mostrado
-  descripcion: string; // Descripción
-  idioma: string; // Código de idioma
-  fuente: string; // Fuente de datos
-}
-```
-
----
-
-## 🚀 Características Técnicas Avanzadas
-
-### **Optimizaciones Implementadas:**
-
-1. **Timeout Management**: 5 segundos para DBpedia
-2. **Error Handling**: Manejo graceful de fallos de conexión
-3. **Parallel Processing**: Búsquedas simultáneas en ambas fuentes
-4. **Cache System**: Cache en memoria para resultados frecuentes
-5. **Responsive Design**: UI adaptada a dispositivos móviles
-
-### **Seguridad:**
-
-1. **noopener,noreferrer**: Previene vulnerabilidades en ventanas nuevas
-2. **Content Security**: Validación de URLs antes de abrir
-3. **Event Management**: Prevención de propagación de eventos
-
-### **UX Enhancements:**
-
-1. **Visual Feedback**: URLs subrayadas y verdes
-2. **Keyboard Support**: Enter para buscar
-3. **Error Messages**: Feedback claro al usuario
-4. **Copy Fallback**: Alternativa cuando no se puede abrir URL
-
----
-
-## 📋 Comandos de Desarrollo
-
-```bash
-# Iniciar backend
-cd backend && npm start
-
-# Iniciar frontend (desarrollo)
-cd front && npm run dev
-
-# Build de producción
-cd front && npm run build
-
-# Verificar errores
-cd front && npm run build
-```
-
-Esta implementación proporciona un buscador semántico robusto con capacidades multilingües, integración con fuentes de datos heterogéneas y una experiencia de usuario intuitiva para navegación de resultados.
