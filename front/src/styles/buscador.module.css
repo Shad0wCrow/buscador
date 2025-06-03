@@ -87,10 +87,19 @@
   line-height: 1.6;
 }
 
+.itemResultado:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 .url {
   font-size: 0.9rem;
   color: #006621;
   margin-bottom: 0.25rem;
+  text-decoration: underline;
+}
+
+.url:hover {
+  color: #004d1a;
 }
 
 .titulo {
@@ -116,4 +125,61 @@
 
 .idioma {
   font-weight: bold;
+}
+
+/* Sin resultados */
+.sinResultados {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  max-width: 500px;
+}
+
+.sinResultados h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #6b7280;
+}
+
+.sinResultados p {
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .formulario {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .inputGroup {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .formulario input {
+    width: 100%;
+  }
+
+  .selector {
+    width: 100%;
+  }
+
+  .formulario button {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .itemResultado {
+    margin: 0 1rem;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+  }
 }

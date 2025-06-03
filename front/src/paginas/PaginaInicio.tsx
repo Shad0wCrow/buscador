@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useSearchParams } from "react-router-dom";
 import styles from "../styles/buscador.module.css";
 import { buscar } from "../api/buscar";
@@ -20,6 +20,16 @@ const etiquetasPredicado: Record<string, string> = {
   "http://www.ejemplo.org/ontologia#email": "Email"
 };
 
+// Función para determinar si una URL es válida
+const esUrlValida = (url: string): boolean => {
+  try {
+    new URL(url);
+    return true;
+  } catch {
+    return false;
+  }
+};
+
 function PaginaInicio() {
   const [busqueda, setBusqueda] = useState("");
   const [idioma, setIdioma] = useState<IdiomaSeleccionado>("all");
@@ -27,19 +37,19 @@ function PaginaInicio() {
   const [mostrarResultados, setMostrarResultados] = useState(false);
   const [, setParametros] = useSearchParams();
 
-  const manejarEnvio = async (e: React.FormEvent) => {
-    e.preventDefault();
+  // Función para realizar búsqueda
+  const realizarBusqueda = async () => {
     if (!busqueda.trim()) return;
 
     try {
       const crudos = (await buscar(busqueda, idioma)) as RawSearchResult[];
       
-      // Lo transformamos a nuestro tipo limpio
+      // Transformar resultados
       const transformados: Resultado[] = crudos.map(r => ({
         url:         r.sujeto,
         titulo:      r.predicado,
         descripcion: r.objeto,
-        idioma:      r.objeto, // En DBpedia, objeto contiene el código de idioma
+        idioma:      r.objeto,
         fuente:      r.fuente || "Desconocida"
       }));
 
@@ -50,6 +60,30 @@ function PaginaInicio() {
       console.error("Error en la búsqueda:", err);
     }
   };
+
+  // Función para manejar envío del formulario
+  const manejarEnvio = (e: React.FormEvent) => {
+    e.preventDefault();
+    realizarBusqueda();
+  };
+
+  // Función para manejar click en URL específicamente
+  const manejarClickUrl = useCallback((e: React.MouseEvent, url: string, titulo: string) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    if (esUrlValida(url)) {
+      // Si es una URL válida, abrir en nueva pestaña
+      window.open(url, '_blank', 'noopener,noreferrer');
+    } else {
+      // Si no es URL válida, copiar al portapapeles
+      navigator.clipboard.writeText(`${titulo}: ${url}`).then(() => {
+        alert('Información copiada al portapapeles');
+      }).catch(() => {
+        alert(`Información: ${titulo}\n${url}`);
+      });
+    }
+  }, []);
 
   return (
     <div className={ mostrarResultados ? styles.contenedorResultados : styles.contenedorInicio }>
@@ -77,11 +111,18 @@ function PaginaInicio() {
           <button type="submit">Buscar</button>
         </form>
       </div>
+      
       {mostrarResultados && (
         <div className={styles.listaResultados}>
           {resultados.map((r, i) => (
             <div key={i} className={styles.itemResultado}>
-              <div className={styles.url}>{r.url}</div>
+              <div 
+                className={styles.url}
+                onClick={(e) => manejarClickUrl(e, r.url, r.titulo)}
+                style={{ cursor: 'pointer' }}
+              >
+                {r.url}
+              </div>
               <div className={styles.titulo}>
                 {etiquetasPredicado[r.titulo] || r.titulo}
               </div>
